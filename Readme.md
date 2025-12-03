@@ -122,7 +122,7 @@ up{job="kubelet"}
 **Step 1 — Port Forward Grafana**
 
 ```bash
-kubectl port-forward -n monitoring svc/prometheus-grafana 3000:80
+kubectl port-forward --address 0.0.0.0 -n monitoring svc/prometheus-grafana 3000:80
 ```
 
 Open Grafana in your browser:
